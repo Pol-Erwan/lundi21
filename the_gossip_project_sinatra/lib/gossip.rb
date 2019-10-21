@@ -23,5 +23,9 @@ class Gossip
     return all_gossips
   end
 
+  def find
+
+  end
+
 end
 #binding.pry
