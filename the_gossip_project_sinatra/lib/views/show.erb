@@ -3,15 +3,11 @@
     <title>All Gossip</title>
   </head>
   <body>
-    <h1>Tous les Potins hihihi</h1>
-<% gossips.each do |gossip| %>
-        <p>
-          <%= gossip.author %><br/>
-          <%= gossip.content %>
-        </p>
-      <% end %>
 
-<br><a href="/">Retour</a></br>
+    <h1 ">PAGE POTIN <span style="color : red;"><%= params['id'] %></span> !</h1>
+    <p> Voici le contenu du potin : <%= Gossip.all[params['id'].to_i].author %></p>             <!-- récupérer l'autheur et le contenu de chaque potin en fonction de son index, params id, on passe en .to_i pour convertir la valeur en intéger  -->
+    <p> Voici le contenu du potin : <%= Gossip.all[params['id'].to_i].content %></p><br><br>
+<br><a href="/"><< Retour</a></br>
 
   </body>
 </html>
